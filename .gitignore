@@ -1,0 +1,4 @@
+/venv/
+/data/*.csv
+.idea/**
+**/*checkpoint.ipynb
