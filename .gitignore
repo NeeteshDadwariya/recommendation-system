@@ -2,3 +2,5 @@
 /data/*.csv
 .idea/**
 **/*checkpoint.ipynb
+__pyccache__/**
+.DS_Store
