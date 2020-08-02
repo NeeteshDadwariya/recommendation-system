@@ -1,0 +1,16 @@
+name: dev
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+dependencies:
+  - pyspark=2.3.2
+  - findspark
+  - ipykernel
+  - jupyter
+  - python=3.7.4
+  - jupyter
+  - jupyterlab
+  - jupyter_contrib_nbextensions
+  - gdown
+

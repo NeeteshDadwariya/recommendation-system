@@ -1,4 +1,0 @@
-pyspark
-fastapi
-uvicorn
-gdown
