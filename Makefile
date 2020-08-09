@@ -25,10 +25,16 @@ create_env:
 	$(CONDA_BIN) env update -n $(CONDA_ENV_NAME) -f $(ENV_FILE)
 
 #To start jupyter notebook (dev mode)
-jupyter:
-	#$(MAKE) create_dev_env
-	#$(CONDA_DEV_ACTIVATE) python -m ipykernel install --user --name=$(CONDA_DEV_ENV_NAME)
+jupyter-demo:
+	$(MAKE) create_dev_env
+	$(CONDA_DEV_ACTIVATE) python -m ipykernel install --user --name=$(CONDA_DEV_ENV_NAME)
 	$(CONDA_DEV_ACTIVATE) jupyter notebook --MultiKernelManager.default_kernel_name=$(CONDA_DEV_ENV_NAME) "./notebooks/demo.ipynb"
+
+#To start jupyter notebook (EDA - Data analysis mode)
+jupyter-eda:
+	$(MAKE) create_dev_env
+	$(CONDA_DEV_ACTIVATE) python -m ipykernel install --user --name=$(CONDA_DEV_ENV_NAME)
+	$(CONDA_DEV_ACTIVATE) jupyter notebook --MultiKernelManager.default_kernel_name=$(CONDA_DEV_ENV_NAME) "./notebooks/eda.ipynb"
 
 HTTP_PORT ?= 8000
 HTTP_HOST ?= "0.0.0.0"
