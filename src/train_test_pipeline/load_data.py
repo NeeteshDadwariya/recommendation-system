@@ -59,4 +59,4 @@ class DataLoader:
         print('TAGS=: ', tags_df.head(5), end='\n\n')
         print('LINKS=: ', links_df.head(5), end='\n\n')
 
-        return links_df, movies_df, ratings_df, tags_df
+        return self.spark.sparkContext, links_df, movies_df, ratings_df, tags_df

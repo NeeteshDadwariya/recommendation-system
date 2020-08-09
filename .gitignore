@@ -1,6 +1,7 @@
 /venv/
 /data/*.csv
-.idea/**
+.idea/**/**
+.idea/misc.xml
 **/*checkpoint.ipynb
 __pycache__/**
 *.pyc
@@ -8,3 +9,4 @@ __pycache__/**
 recommendation-system-dev
 nohup.out
 test.ipynb
+/model_dumps/als_matrix_factorization.pkl/
