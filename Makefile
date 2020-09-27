@@ -36,6 +36,12 @@ jupyter-eda:
 	$(CONDA_DEV_ACTIVATE) python -m ipykernel install --user --name=$(CONDA_DEV_ENV_NAME)
 	$(CONDA_DEV_ACTIVATE) jupyter notebook --MultiKernelManager.default_kernel_name=$(CONDA_DEV_ENV_NAME) "./notebooks/eda.ipynb"
 
+#To start jupyter notebook (EDA - Data analysis mode)
+jupyter-nlp:
+	$(MAKE) create_dev_env
+	$(CONDA_DEV_ACTIVATE) python -m ipykernel install --user --name=$(CONDA_DEV_ENV_NAME)
+	$(CONDA_DEV_ACTIVATE) jupyter notebook --MultiKernelManager.default_kernel_name=$(CONDA_DEV_ENV_NAME) "./notebooks/movie-review-sentiment-analysis.ipynb"
+
 HTTP_PORT ?= 8000
 HTTP_HOST ?= "0.0.0.0"
 
@@ -46,16 +52,12 @@ run:
 
 #building training docker
 docker_build:
-#
-
-#running training docker
-docker_run:
-#
+	docker build -f docker/DockerfileDev -t recommendation-system-dev .
 
 #docker-build-for-inference
 package_docker:
-#
+	docker build -f docker/Dockerfile -t recommendation-system-dev .
 
-#run docker inference engine
-publish_docker:
-#
+#running docker
+docker_run:
+	docker-compose up

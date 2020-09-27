@@ -3,12 +3,12 @@ services:
   train_test_pipeline:
     build:
       context: .
-      dockerfile: './docker/train_test_pipeline/Dockerfile'
+      dockerfile: './docker/DockerfileDev'
     ports:
       - "7000:7000"
   inference_pipeline:
     build:
       context: .
-      dockerfile: './docker/inference_pipeline/Dockerfile'
+      dockerfile: './docker/Dockerfile'
     ports:
       - "8000:8000"

@@ -12,4 +12,7 @@ dependencies:
   - jupyter_contrib_nbextensions
   - gdown
   - seaborn
+  - nltk
+  - regex
+  - scikit-learn
 
