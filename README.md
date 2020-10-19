@@ -21,10 +21,10 @@ The reference is taken from the ALS matrix factorization recommendation model by
 
 Variations from reference
 ================================
-1. The project has been built in keeping industry level mindset, hence industry settings - docker containerization, environment setup has been implemented.
+1. The project has been built in keeping industry level mindset, hence industry settings - [docker containerization](./docker), environment setup has been implemented.
 2. [EDA - (Exploratory data analysis)](./notebooks/eda.ipynb) has been performed to showcase the train dataset and explore the potential features and dimensions that can be fruitful.
 3. Separate train and inference pipeline has been implemented and containerized as separate services with different environment settings.
-4. Inference pipeline is exposed via RESTful Web-API's for the end client to be able to extract direct movie recommendations for any given input.
+4. Inference pipeline is exposed via [RESTful Web-API's](./src/inference_pipeline/app.py) for the end client to be able to extract direct movie recommendations for any given input.
  
 Usage License
 =============
