@@ -25,6 +25,7 @@ Variations from reference
 2. [EDA - (Exploratory data analysis)](./notebooks/eda.ipynb) has been performed to showcase the train dataset and explore the potential features and dimensions that can be fruitful.
 3. Separate train and inference pipeline has been implemented and containerized as separate services with different environment settings.
 4. Inference pipeline is exposed via [RESTful Web-API's](./src/inference_pipeline/app.py) for the end client to be able to extract direct movie recommendations for any given input.
+5. Project buiding and bundling has been provided via [Makefile](./Makefile) to ease out command and env setup for any individual developer. 
  
 Usage License
 =============
