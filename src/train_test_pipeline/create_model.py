@@ -10,7 +10,6 @@ class ModelBuilder:
         self.rating_df = ratings_df
         self.model = None
         self.model_params = None
-        #self.ratings_RDD = sc.parallelize(ratings_df)
 
     def train_model(self):
         logger.info("Training the ALS model...")
@@ -27,11 +26,6 @@ class ModelBuilder:
             'iterations': 10,
             'regularization_parameter': 0.1
         }
-        # self.model = ALS.train(self.ratings_RDD,
-        #                        rank=self.model_params["rank"],
-        #                        seed=self.model_params["seed"],
-        #                        iterations=self.model_params["iterations"],
-        #                        lambda_=self.model_params["regularization_parameter"])
 
         self.model = ALS(maxIter=5, regParam=0.09, rank=25, userCol="userId", itemCol="movieId",
                          ratingCol="rating", coldStartStrategy="drop", nonnegative=True);
@@ -39,5 +33,5 @@ class ModelBuilder:
         logger.info("ALS model built!")
 
     def save_model(self):
-        # Save the model to S3 / Google drive with the hyper-parameters.
+        # TODO:Save the model to S3 / Google drive with the hyper-parameters.
         return

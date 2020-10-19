@@ -13,7 +13,19 @@ This is a *development* dataset. As such, it may change over time and is not an 
 
 This and other GroupLens data sets are publicly available for download at <http://grouplens.org/datasets/>.
 
+Reference
+=======
 
+The project is built solely for the learning and implementation understanding and should not be cited for any production usages. 
+The reference is taken from the ALS matrix factorization recommendation model by Snehal Nair's [blog](https://towardsdatascience.com/build-recommendation-system-with-pyspark-using-alternating-least-squares-als-matrix-factorisation-ebe1ad2e7679#:~:text=Understand%20data%20munging%20in%20PySpark,%E2%80%94%20Alternating%20Least%20Squares%20(ALS)&text=Recommender%20System%20is%20an%20information,few%20products%20to%20the%20users.)
+
+Variations from reference
+================================
+1. The project has been built in keeping industry level mindset, hence industry settings - docker containerization, environment setup has been implemented.
+2. EDA (Exploratory data analysis) has been performed to showcase the train dataset and explore the potential features and dimensions that can be fruitful.
+3. Separate train and inference pipeline has been implemented and containerized as separate services with different environment settings.
+4. Inference pipeline is exposed via RESTful Web-API's for the end client to be able to extract direct movie recommendations for any given input.
+ 
 Usage License
 =============
 
